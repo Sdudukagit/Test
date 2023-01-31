@@ -1,17 +1,10 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "3.41.0"
-    }
-  }
-}
-
 provider "azurerm" {
-  # Configuration options
+  version = "~2.4.0"
+  features ()
 }
 
-resource "azurerm_resource_group" "myrg" {
-  name = "myrg-1"
-  location = "East US"
+resource "azurerm_resource_group" "example" {
+  name = "sharath"
+
+  location = "uk south"
 }
